@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import Auth from '../utils/auth';
-import { QUERY_ME } from '../utils/queries';
+import { GET_ME } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
 import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
   // use useQuery hook to make querry request
-  const { loading, data } = useQuery({QUERY_ME});
+  const { loading, data } = useQuery({GET_ME});
   const [ removeBook, { error }] = useMutation(REMOVE_BOOK);
 
   const userData = data?.me || {};
