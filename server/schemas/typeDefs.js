@@ -15,7 +15,7 @@ const typeDefs = gql`
     email: String
     password: String
     bookCount: Int
-    saveBooks: [Book]
+    savedBooks: [Book]
   }
   input BookInput {
     authors: [String]

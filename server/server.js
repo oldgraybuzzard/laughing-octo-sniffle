@@ -4,7 +4,7 @@ const { authMiddleware } = require('./utils/auth');
 const path = require('path');
 
 //import typeDefs and resolvers
-const { typeDefs, resolvers } = require('./schemas');
+const { typeDefs, resolvers } = require('./Schemas');
 const db = require('./config/connection');
 
 const app = express();
